@@ -111,7 +111,7 @@ end
 getProximity()
 
 function displayText(text, justification, red, green, blue, alpha, posx, posy)
-    SetTextFont(4)
+    SetTextFont(0)
     SetTextWrap(0.0, 1.0)
     SetTextScale(1.0, 0.5)
     SetTextJustification(justification)
@@ -139,7 +139,7 @@ Citizen.CreateThread(function()
                 end
             end
             if playersTalking[1] ~= "empty" then
-                displayText("Currently talking:", 0, 255, 255, 255, 255, 0.5, 0.0)
+                displayText("Currently talking:", 0, 255, 255, 255, 255, 0.5, 0.0) --"Currently talking:" 裡面能改中文
                 count = 0
                 for k,v in pairs(playersTalking) do
                     displayText("~f~" .. v, 0, 255, 255, 255, 255, 0.5, 0.025 + (0.025*(count)))
